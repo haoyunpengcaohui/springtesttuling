@@ -15,5 +15,14 @@ public int getAge() {
 public void setAge(int age) {
 	this.age = age;
 }
+public User(String username, int age) {
+	super();
+	this.username = username;
+	this.age = age;
+}
+public User() {
+	super();
+	// TODO Auto-generated constructor stub
+}
   
 }

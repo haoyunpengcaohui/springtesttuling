@@ -3,6 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
-    <bean class="com.test.User"></bean>
-    <bean class="com.test.HellSpring"></bean>
+    <bean  class="com.test.User"></bean>
+        <bean id="user" class="com.test.User"  primary="true">
+          <constructor-arg name="username" value="hyp"/>
+            <constructor-arg name="age" value="10"/>
+        </bean>
+    <bean class="com.test.HellSpring">
+     <constructor-arg name="user" ref="user"/>
+            <constructor-arg name="name" value="wer"/>
+    </bean>
 </beans>
